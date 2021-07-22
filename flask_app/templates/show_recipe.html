@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Recipe for {{recipe.name}}</title>
+</head>
+<body class="container mt-lg-5">
+    <h1>Welcome {{session['first_name']}}!</h1>
+    <a href="/dashboard" class="btn btn-success">Dashboard</a>
+    <a href="/logout/user" class="btn btn-danger">Logout</a>
+    <div class="mt-lg-2">
+    <h2>{{recipe.name}}</h2>
+    </div>
+    <div>
+        <table class="table table-borderless border border-2">
+            <tr>
+                <td>Description:</td>
+                <td>{{recipe.description}}</td>
+            </tr>
+            <tr>
+                <td>Under 30 minutes:</td>
+                <td>{{recipe.under_30}}</td>
+            </tr>
+            <tr>
+                <td>Instructions:</td>
+                <td>{{recipe.instructions}}</td>
+            </tr>
+            <tr>
+                <td>Date Made:</td>
+                <td>{{recipe.date_made}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
